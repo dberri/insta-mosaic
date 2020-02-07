@@ -50,7 +50,7 @@ export default class InstagramService {
     const expiresOn = this._stringToDate(expires);
     const today = this._stringToDate(new Date().toISOString().split("T")[0]);
 
-    if (expiresOn > today) return false;
+    if (expiresOn < today) return false;
 
     return data;
   }
