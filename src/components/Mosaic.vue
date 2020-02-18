@@ -3,7 +3,7 @@
     <Header :profile-data="profile" />
     <main>
       <Grid v-if="!profile.isPrivate">
-        <Post v-for="(photo, i) in photos" :key="i" v-bind="photo" />
+        <Post v-for="photo in photos" :key="photoId(photo)" v-bind="photo" />
       </Grid>
       <p v-else class="isPrivate">
         <Lock />
@@ -77,6 +77,10 @@ export default {
       for (let x = 0; x < allItems.length; x++) {
         this.resizeGridItem(allItems[x]);
       }
+    },
+
+    photoId(photo) {
+      return photo.url.split("=").reverse()[0];
     }
   },
 
