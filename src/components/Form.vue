@@ -31,9 +31,9 @@ export default {
 }
 
 .Form-input {
-  border: 2px solid #2c3e50;
+  border: 2px solid var(--primary-color);
   border-right: none;
-  color: #2c3e50;
+  color: var(--primary-color);
   padding: 10px 15px;
   font-size: 0.85rem;
   font-weight: bold;
@@ -43,7 +43,7 @@ export default {
   background-color: #fff;
   box-shadow: none;
   cursor: pointer;
-  border: 2px solid #2c3e50;
+  border: 2px solid var(--primary-color);
   padding: 10px 15px;
   font-weight: bold;
   font-size: 0.85rem;
@@ -52,6 +52,6 @@ export default {
 
 .Form-submitButton:hover {
   color: #fff;
-  background-color: #2c3e50;
+  background-color: var(--primary-color);
 }
 </style>
