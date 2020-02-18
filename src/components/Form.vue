@@ -26,6 +26,8 @@ export default {
 
 <style>
 .Form {
+  margin: 3rem;
+  text-align: center;
 }
 
 .Form-input {
