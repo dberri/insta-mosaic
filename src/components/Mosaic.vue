@@ -3,7 +3,11 @@
     <Header :profile-data="profile" />
     <main>
       <Grid v-if="!profile.isPrivate">
-        <Post v-for="photo in photos" :key="photoId(photo)" v-bind="photo" />
+        <Post
+          v-for="photo in orderedPhotos"
+          :key="photoId(photo)"
+          v-bind="photo"
+        />
       </Grid>
       <p v-else class="isPrivate">
         <Lock />
@@ -45,6 +49,13 @@ export default {
     user() {
       this.profile = {};
       this.getData();
+    }
+  },
+
+  computed: {
+    orderedPhotos() {
+      const photos = [...this.photos];
+      return photos.sort((a, b) => b.likeCount - a.likeCount);
     }
   },
 
