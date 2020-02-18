@@ -14,7 +14,7 @@ export default {
 .Grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   margin: 0 auto;
   max-width: 960px;
 }
