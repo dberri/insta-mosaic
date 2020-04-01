@@ -3,7 +3,7 @@
 
 A Vue app that makes use of Instagram's private API to display a grid of pictures and profile information.
 
-## [DEMO](https://insta-mosaic.netlify.com)
+## [DEMO](https://insta-mosaic.netlify.app)
 
 ## Project setup
 ```
